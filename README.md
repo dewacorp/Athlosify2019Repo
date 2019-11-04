@@ -6,7 +6,7 @@ This application called Athlosify 2019 is an experimental application initiated 
 
 The subject domain of this application is related to golf activities. It covers a basic CRUD for activity such as list, detail, create new, edit and delete the activity as well activity category.
 
-This application has controllers for Web API for handling the Account and Activities. It also has views in the mobile app for handling the login, logout, sign up, home, about, forgot the password, activity list, activity detail and activity search. 
+This application has controllers for Web API for handling the Account, Activities and Categories. It also has views in the mobile app for handling the login, logout, sign up, home, about, forgot the password, activity list, activity detail and activity search. 
 
 ### Challenges:
 * Web API with soft delete approach
