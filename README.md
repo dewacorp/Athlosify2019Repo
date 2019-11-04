@@ -9,7 +9,7 @@ The subject domain of this application is related to golf activities. It covers 
 This application has controllers for Web API for handling the Account and Activities. It also has views in the mobile app for handling the login, logout, sign up, home, about, forgot the password, activity list, activity detail and activity search. 
 
 ### Challenges:
-* Web API
+* Web API with soft delete approach
 * Xamarin Forms using MVVM approach without any framework
 
 ### Version:
