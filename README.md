@@ -32,7 +32,7 @@ This application has controllers for Web API for handling the Account and Activi
 * WebApi.Output.Cache
 * Xamarin.Forms
 
-Contributors:
+### Contributors:
 * Valdy
 * Jeff Morgan
 * Arki Valdy
