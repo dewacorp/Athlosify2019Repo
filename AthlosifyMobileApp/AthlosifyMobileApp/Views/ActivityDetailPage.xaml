@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="AthlosifyMobileApp.Views.ActivityDetailPage">
+	<NavigationPage.TitleView>
+		<Label Text="{Binding PageTitle}" TextColor="White" />
+	</NavigationPage.TitleView>
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Command="{Binding DeleteCommand}">
+			<ToolbarItem.IconImageSource>
+				<FontImageSource  Glyph="&#xf1c0;" Size="20" FontFamily="{StaticResource MaterialFontFamily}"/>
+			</ToolbarItem.IconImageSource>
+		</ToolbarItem>
+		<ToolbarItem Command="{Binding SaveCommand}">
+			<ToolbarItem.IconImageSource>
+				<FontImageSource Glyph="&#xf193;" Size="20" FontFamily="{StaticResource MaterialFontFamily}"/>
+			</ToolbarItem.IconImageSource>
+		</ToolbarItem>
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<StackLayout Padding="20" Spacing="5" BackgroundColor="AliceBlue">
+			<Entry Placeholder="Name" Text="{Binding Activity.Name}" FontSize="15" HeightRequest="40" BackgroundColor="White" HorizontalOptions="FillAndExpand"></Entry>
+			<Picker Title="Category" ItemsSource="{Binding CategoryList}" ItemDisplayBinding="{Binding Name}"  SelectedItem="{Binding SelectedCategory}" FontSize="15" HeightRequest="40" BackgroundColor="White" HorizontalOptions="FillAndExpand"></Picker>
+			<Entry Placeholder="No of minutes" Text="{Binding Activity.NoOfMinutes}" FontSize="15" HeightRequest="40" BackgroundColor="White" HorizontalOptions="FillAndExpand"></Entry>
+			<Editor Placeholder="Description" Text="{Binding Activity.Description}" FontSize="15" HeightRequest="120" BackgroundColor="White" HorizontalOptions="FillAndExpand"></Editor>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

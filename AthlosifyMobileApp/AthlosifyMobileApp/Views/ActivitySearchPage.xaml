@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:extended="clr-namespace:Xamarin.Forms.Extended;assembly=Xamarin.Forms.Extended.InfiniteScrolling"
+             x:Class="AthlosifyMobileApp.Views.ActivitySearchPage">
+	<NavigationPage.TitleView>
+		<Label Text="{Binding PageTitle}" TextColor="White" />
+	</NavigationPage.TitleView>
+	<ContentPage.ToolbarItems>
+		<!-- Binding has a bug for FontImageSource and this is quick fix -->
+		<ToolbarItem Command="{Binding SearchCommand}">
+			<ToolbarItem.IconImageSource>
+				<FontImageSource Glyph="&#xf349;" FontFamily="{StaticResource MaterialFontFamily}"/>
+			</ToolbarItem.IconImageSource>
+		</ToolbarItem>
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<ListView ItemsSource="{Binding ActivityList}" HasUnevenRows="True" CachingStrategy="RecycleElement" SelectedItem="{Binding SelectedItem}">
+			<ListView.Header>
+				<StackLayout Orientation="Vertical" Padding="20" Spacing="5" BackgroundColor="AliceBlue">
+					<Entry Placeholder="Keyword search" Text="{Binding Keyword}" BackgroundColor="White"></Entry>
+				</StackLayout>
+			</ListView.Header>
+			<ListView.Behaviors>
+				<extended:InfiniteScrollBehavior IsLoadingMore="{Binding IsBusy}" />
+			</ListView.Behaviors>
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<StackLayout Orientation="Vertical" Padding="20" Spacing="5" BackgroundColor="AliceBlue">
+							<Label Text="{Binding Name}" Grid.Row="0" Grid.Column="0" TextColor="Black"></Label>
+							<StackLayout Orientation="Horizontal">
+								<Label Text="{Binding CreatedDate}" TextColor="Black" FontSize="Micro"></Label>
+								<Label Text="{Binding CategoryName}" TextColor="Black" FontSize="Micro"></Label>
+							</StackLayout>
+						</StackLayout>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+			<ListView.Footer>
+				<Grid Padding="5" IsVisible="{Binding IsBusy}">
+					<Grid.Triggers>
+						<Trigger TargetType="Grid" Property="IsVisible" Value="False">
+							<Setter Property="HeightRequest" Value="0" />
+						</Trigger>
+					</Grid.Triggers>
+					<Label Text="Loading..." TextColor="Crimson" FontSize="Large"
+                           VerticalOptions="Center" HorizontalOptions="Center" />
+				</Grid>
+			</ListView.Footer>
+		</ListView>
+	</ContentPage.Content>
+</ContentPage>

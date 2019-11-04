@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AthlosifyMobileApp.Views.SignUpPage">
+    <ContentPage.Content>
+		<ScrollView>
+			<StackLayout Margin="20" >
+				<Label Text="Welcome to Athlosify" FontSize="Medium" TextColor="#707070" />
+				<Entry Placeholder="First Name" BackgroundColor="White" PlaceholderColor="#707070" FontSize="Small" Text="{Binding FirstName}" />
+				<Entry Placeholder="Last Name" BackgroundColor="White" PlaceholderColor="#707070" FontSize="Small" Text="{Binding LastName}" />
+				<Entry Placeholder="Handicap" BackgroundColor="White" PlaceholderColor="#707070" FontSize="Small" Text="{Binding Handicap}" />
+				<Picker Title="Role" SelectedItem="{Binding SelectedUserRole}" FontSize="15" HeightRequest="40" BackgroundColor="White" HorizontalOptions="FillAndExpand">
+					<Picker.ItemsSource>
+						<x:Array Type="{x:Type x:String}">
+							<x:String>Player</x:String>
+							<x:String>Coach</x:String>
+						</x:Array>
+					</Picker.ItemsSource>
+				</Picker>
+				<Entry Placeholder="Email" BackgroundColor="White" PlaceholderColor="#707070" FontSize="Small" Text="{Binding Email}" />
+				<Entry Placeholder="Password" BackgroundColor="White" PlaceholderColor="#707070" FontSize="Small" IsPassword="True" Text="{Binding Password}" />
+				<Entry Placeholder="Confirm Password" BackgroundColor="White" PlaceholderColor="#707070" FontSize="Small" IsPassword="True" Text="{Binding ConfirmPassword}" />
+				<Button Text="Sign Up" BackgroundColor="RoyalBlue" FontSize="Small" TextColor="White" CornerRadius="30" HeightRequest="40" Command="{Binding SignUpCommand}"></Button>
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
+</ContentPage>

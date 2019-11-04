@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AthlosifyMobileApp.Views.AboutPage">
+	<NavigationPage.TitleView>
+		<Label Text="{Binding PageTitle}" TextColor="White" />
+	</NavigationPage.TitleView>
+	<ContentPage.Content>
+		<StackLayout Margin="20" Padding="5" BackgroundColor="AliceBlue">
+			<Label Text="Name:" TextColor="#707070" FontSize="Micro" FontAttributes="Bold"/>
+			<Label Text="{Binding Name}" TextColor="#707070" FontSize="Micro"/>
+			<Label Text="Version:" TextColor="#707070" FontSize="Micro" FontAttributes="Bold"/>
+			<Label Text="{Binding Version}" TextColor="#707070" FontSize="Micro"/>
+			<Label Text="Description:" TextColor="#707070" FontSize="Micro" FontAttributes="Bold"/>
+			<Label Text="{Binding Description}" TextColor="#707070" FontSize="Micro"/>
+			<Label Text="Owner:" TextColor="#707070" FontSize="Micro" FontAttributes="Bold"/>
+			<Label Text="{Binding Owner}" TextColor="#707070" FontSize="Micro"/>
+			<Label Text="URL:" TextColor="#707070" FontSize="Micro" FontAttributes="Bold"/>
+			<StackLayout>
+				<Label Text="{Binding OwnerWebsiteURL}" TextColor="#707070" FontSize="Micro" TextDecorations="Underline"/>
+				<StackLayout.GestureRecognizers>
+					<TapGestureRecognizer Command="{Binding OwnerWebsiteURLCommand}" />
+				</StackLayout.GestureRecognizers>		
+			</StackLayout>
+			<Label Text="Contributors:" TextColor="#707070" FontSize="Micro" FontAttributes="Bold"/>
+			<Label Text="{Binding Contributor}" TextColor="#707070" FontSize="Micro"/>
+		</StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AthlosifyMobileApp.Views.MasterPage"
+             xmlns:pages="clr-namespace:AthlosifyMobileApp.Views">
+  <MasterDetailPage.Master>
+		<ContentPage Title="Master" >
+			<StackLayout BackgroundColor="AliceBlue">
+				<Grid BackgroundColor="RoyalBlue">
+					<BoxView  HeightRequest="120" />
+					<Label Text="Welcome to Athlosify" TextColor="White" FontSize="Small" Margin="20, 50, 0, 0" />
+				</Grid>
+				<StackLayout Orientation="Horizontal" Margin="20,20,0,0" Spacing="10">
+					<ImageButton>
+						<ImageButton.Source>
+							<FontImageSource FontFamily="{StaticResource MaterialFontFamily}"  Glyph="&#xf6a0;" Size="25" />
+						</ImageButton.Source>
+					</ImageButton>
+					<Label Text="Home" FontSize="Small" VerticalOptions="Center" TextColor="#707070"></Label>
+					<StackLayout.GestureRecognizers>
+						<TapGestureRecognizer Command="{Binding HomeCommand}" />
+					</StackLayout.GestureRecognizers>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" Margin="20,20,0,0" Spacing="10">
+					<ImageButton>
+						<ImageButton.Source>
+							<FontImageSource FontFamily="{StaticResource MaterialFontFamily}"  Glyph="&#xf224;" Size="25" />
+						</ImageButton.Source>
+					</ImageButton>
+					<Label Text="Activities" FontSize="Small" VerticalOptions="Center" TextColor="#707070"></Label>
+					<StackLayout.GestureRecognizers>
+						<TapGestureRecognizer Command="{Binding ActivitiesCommand}" />
+					</StackLayout.GestureRecognizers>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" Margin="20,20,0,0" Spacing="10">
+					<ImageButton>
+						<ImageButton.Source>
+							<FontImageSource FontFamily="{StaticResource MaterialFontFamily}"  Glyph="&#xf30b;" Size="25" />
+						</ImageButton.Source>
+					</ImageButton>
+					<Label Text="Change Password" FontSize="Small" VerticalOptions="Center" TextColor="#707070"></Label>
+					<StackLayout.GestureRecognizers>
+						<TapGestureRecognizer Command="{Binding ChangePasswordCommand}" />
+					</StackLayout.GestureRecognizers>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" Margin="20,20,0,0" Spacing="10">
+					<ImageButton>
+						<ImageButton.Source>
+							<FontImageSource FontFamily="{StaticResource MaterialFontFamily}"  Glyph="&#xf343;" Size="25" />
+						</ImageButton.Source>
+					</ImageButton>
+					<Label Text="Logout" FontSize="Small" VerticalOptions="Center" TextColor="#707070"></Label>
+					<StackLayout.GestureRecognizers>
+						<TapGestureRecognizer Command="{Binding LogoutCommand}" />
+					</StackLayout.GestureRecognizers>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" Margin="20,20,0,0" Spacing="10">
+					<ImageButton>
+						<ImageButton.Source>
+							<FontImageSource FontFamily="{StaticResource MaterialFontFamily}"  Glyph="&#xf343;" Size="25" />
+						</ImageButton.Source>
+					</ImageButton>
+					<Label Text="About" FontSize="Small" VerticalOptions="Center" TextColor="#707070"></Label>
+					<StackLayout.GestureRecognizers>
+						<TapGestureRecognizer Command="{Binding AboutCommand}" />
+					</StackLayout.GestureRecognizers>
+				</StackLayout>
+			</StackLayout>
+		</ContentPage>
+  </MasterDetailPage.Master>
+  <MasterDetailPage.Detail>
+		<NavigationPage>
+			<x:Arguments>
+				<pages:HomePage></pages:HomePage>
+			</x:Arguments>
+		</NavigationPage>
+  </MasterDetailPage.Detail>
+</MasterDetailPage>
