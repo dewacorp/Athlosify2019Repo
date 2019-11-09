@@ -16,7 +16,7 @@ This application has controllers for Web API for handling the Account, Activitie
 * 1.1 (2019)
 
 ### More Information
-Check out Wiki - https://github.com/dewacorp/Athlosify-2019-Repo/wiki
+Check out the Wiki - https://github.com/dewacorp/Athlosify-2019-Repo/wiki
 
 
 
