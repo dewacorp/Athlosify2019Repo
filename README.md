@@ -8,32 +8,17 @@ The subject domain of this application is related to golf activities. It covers 
 
 This application has controllers for Web API for handling the Account, Activities and Categories. It also has views in the mobile app for handling the login, logout, sign up, home, about, forgot the password, activity list, activity detail and activity search. 
 
-### Challenges:
+### Challenges
 * Web API with soft delete approach
 * Xamarin Forms using MVVM approach without any framework
 
-### Version:
+### Version
 * 1.1 (2019)
 
-### Technologies:
-* Microsoft .Net Framework 4.7
-* Microsoft SQL Server
-* Microsoft Xamarin Forms
+### More Information
+Check out Wiki - https://github.com/dewacorp/Athlosify-2019-Repo/wiki
 
-### Patterns:
-* MVVM
 
-### Dependencies:
-* AutoMapper
-* CommonServiceLocator
-* FluentValidation
-* Newtonsoft.Json
-* System.Threading.Task.Extensions
-* WebApi.Output.Cache
-* Xamarin.Forms
 
-### Contributors:
-* Valdy
-* Jeff Morgan
-* Arki Valdy
-* Aaron Valdy
+
+
